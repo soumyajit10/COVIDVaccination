@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/covidvaccine"
+    tools:context=".MainActivity">
+
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/yellow"
+        app:cardCornerRadius="15dp"
+        android:id="@+id/card"
+        app:cardElevation="20dp"
+        android:layout_margin="20dp">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/idEditTextPinCode"
+        android:inputType="number"
+        android:drawableLeft="@drawable/ic_baseline_search_24"
+        android:textColor="@color/purple_700"
+        android:fontFamily="serif"
+        android:textAlignment="textStart"
+        android:hint="Enter PinCode"
+        android:textColorHint="@color/purple_700"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Search"
+        android:id="@+id/idBtnSearch"
+        android:backgroundTint="@color/green"
+        android:layout_below="@id/card"
+        android:textSize="17sp"
+        android:textColor="@color/purple_500"
+        android:layout_centerHorizontal="true"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/idBtnSearch"
+        android:layout_margin="8dp"
+        android:id="@+id/idRecyclerCenters"/>
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        android:id="@+id/idProgress"/>
+
+
+</RelativeLayout>
